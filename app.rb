@@ -2,7 +2,7 @@ require 'sinatra'
 require 'json'
 require 'rubygems'
 require 'active_record'
-
+require 'sinatra/reloader' if development?
 
 ActiveRecord::Base.establish_connection(
     adapter: "mysql2",

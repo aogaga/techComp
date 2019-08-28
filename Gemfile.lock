@@ -14,10 +14,14 @@ GEM
       tzinfo (~> 1.1)
     arel (9.0.0)
     concurrent-ruby (1.1.5)
+    haml (5.1.2)
+      temple (>= 0.8.0)
+      tilt
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     minitest (5.11.3)
     mustermann (1.0.3)
+    puma (3.12.0)
     rack (2.0.7)
     rack-protection (2.0.7)
       rack
@@ -30,7 +34,7 @@ GEM
     sinatra-activerecord (2.0.13)
       activerecord (>= 3.2)
       sinatra (>= 1.0)
-    sqlite3 (1.4.1)
+    temple (0.8.1)
     thread_safe (0.3.6)
     tilt (2.0.9)
     tzinfo (1.2.5)
@@ -41,10 +45,11 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  haml
+  puma
   rake
   sinatra
   sinatra-activerecord
-  sqlite3
 
 BUNDLED WITH
    1.16.0
