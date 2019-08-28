@@ -26,8 +26,11 @@ end
 
 class Comp < ActiveRecord::Base
 end
-get "/" do
+class Movie < ActiveRecord::Base
+end
 
+
+get "/" do
   content_type :json
   "hello world".to_json
 end
@@ -36,3 +39,19 @@ get "/allcomp" do
     @allcomp = Comp.all
     @allcomp.to_json
  end
+
+
+get "/allmovie" do
+  content_type :json
+  @moovies = Comp.all
+  @moovies.to_json
+end
+
+def "/add" do
+  unless params[:name] && params[:oid]
+    return 'Invalid Request'
+    movie = { name: params[:name], oid: params[:oid] }
+    file << movie
+    File.write('data.json',JSON.pretty_generate(file))
+    movie.to_json
+end

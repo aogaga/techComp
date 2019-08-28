@@ -51,7 +51,7 @@ DEPENDENCIES
   rake
   sinatra
   sinatra-activerecord
-  sinatra-cross_origin (~> 0.3.1)
+  sinatra-cross_origin
 
 BUNDLED WITH
    1.16.0
