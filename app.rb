@@ -13,9 +13,13 @@ ActiveRecord::Base.establish_connection(
 
 # Model
 class Comp < ActiveRecord::Base
-end 
-
+end
 get "/" do
+
+  content_type :json
+  "hello world".to_json
+end
+get "/allcomp" do
   # File.read('./views/index.haml')
   # "All the best"
 
